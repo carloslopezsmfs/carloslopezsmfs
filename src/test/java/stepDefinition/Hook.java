@@ -24,7 +24,7 @@ public class Hook {
     @Before
     public static void setUp() {
         System.setProperty("wdm.defaultBrowser", "chrome");
-        wdm = WebDriverManager.getInstance().proxy("");
+        wdm = WebDriverManager.chromedriver().proxy("");
         driver = wdm.create();
     }
 
