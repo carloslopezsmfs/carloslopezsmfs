@@ -23,16 +23,13 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn clean compile test --file pom.xml
     - name: "Import results to Xray"
       uses: mikepenz/xray-action@{latest-release}
-      env:
-        CLIENT_ID: ${{ secrets.XRAY_CLIENT_ID }}
-        CLIENT_SECRET: ${{ secrets.XRAY_CLIENT_SECRET }}
       with:
-        username: ${{ secrets.XRAY_CLIENT_ID }}
-        password: ${{ secrets.XRAY_CLIENT_SECRET }}
+        username: ${{ secrets.CLIENT_ID }}
+        password: ${{ secrets.CLIENT_SECRET }}
         testFormat: "junit"
-        testPaths: "**/test/*.xml"
+        testPaths: "**/surefire-reports/*.xml"
         testExecKey: "TEST-2194"
         projectKey: "TEST"
