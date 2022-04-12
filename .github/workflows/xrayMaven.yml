@@ -25,7 +25,7 @@ jobs:
     - name: Build with Maven
       run: mvn clean compile test --file pom.xml
     - name: "Import results to Xray"
-      uses: mikepenz/xray-action@{latest-release}
+      uses: mikepenz/xray-action@v2.3.1
       with:
         username: ${{ secrets.CLIENT_ID }}
         password: ${{ secrets.CLIENT_SECRET }}
