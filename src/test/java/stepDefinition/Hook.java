@@ -4,8 +4,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 
 public class Hook {
 
@@ -13,10 +12,8 @@ public class Hook {
 
     @Before
     public static void setUp() {
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        //options.addArguments("--headless");
-        driver = new ChromeDriver(options);
+        WebDriverManager.edgedriver().setup();
+        driver = new EdgeDriver();
         driver.navigate().to("https://qa.oswfs.com/NexxarGenWeb/");
         driver.manage().window().maximize();
     }
