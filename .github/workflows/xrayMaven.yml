@@ -30,6 +30,6 @@ jobs:
         username: ${{ secrets.CLIENT_ID }}
         password: ${{ secrets.CLIENT_SECRET }}
         testFormat: "junit"
-        testPaths: "**/surefire-reports/*.xml"
+        testPaths: "**/cucumber-reports/cucumber-results.xml"
         testExecKey: "TEST-2194"
         projectKey: "TEST"
