@@ -8,20 +8,22 @@ import org.openqa.selenium.edge.EdgeDriver;
 
 public class Hook {
 
-    public static WebDriver driver;
+    static WebDriver driver;
+
+    static WebDriverManager wdm;
 
     @Before
     public static void setUp() {
-        WebDriverManager.edgedriver().setup();
-        driver = new EdgeDriver();
+        System.setProperty("wdm.defaultBrowser", "chrome");
+        wdm = WebDriverManager.getInstance();
+        driver = wdm.create();
         driver.navigate().to("https://qa.oswfs.com/NexxarGenWeb/");
         driver.manage().window().maximize();
     }
 
     @After
     public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+        wdm.quit();
+        System.clearProperty("wdm.defaultBrowser");
     }
 }
