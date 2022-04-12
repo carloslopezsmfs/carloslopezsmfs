@@ -19,7 +19,7 @@ public class Hook {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--headless");
+        //options.addArguments("--headless");
         driver = new ChromeDriver(options);
         driver.navigate().to("https://qa.oswfs.com/NexxarGenWeb/");
         driver.manage().window().maximize();
