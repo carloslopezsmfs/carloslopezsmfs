@@ -37,14 +37,16 @@ public class TestPage {
         Thread.sleep(1000);
         goToMenu();
         Assert.assertTrue(driver.findElement(By.id("menu_whoAmI_myUserSettings")).isDisplayed());*/
-        String sutUrl = "https://bonigarcia.dev/selenium-webdriver-java/";
+        String sutUrl = "https://www.bing.com/";
         driver.get(sutUrl);
         String title = driver.getTitle();
         log.debug("The title of {} is {}", sutUrl, title);
-
-        Wait<WebDriver> wait = new WebDriverWait(driver,
-                Duration.ofSeconds(30));
-        wait.until(d -> d.getTitle().contains("Selenium WebDriver"));
+        WebElement element = driver.findElement(By.id("sb_form_q"));
+        element.sendKeys("test");
+        WebElement element1 = driver.findElement(By.id("search_icon"));
+        element1.click();
+        String title1 = driver.getTitle();
+        Assert.assertNotEquals(title, title1);
     }
 
     private void changeFrame(String frameName) {
