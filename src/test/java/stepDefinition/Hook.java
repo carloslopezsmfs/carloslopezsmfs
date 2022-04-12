@@ -17,8 +17,8 @@ public class Hook {
         System.setProperty("wdm.defaultBrowser", "chrome");
         wdm = WebDriverManager.getInstance();
         driver = wdm.create();
-        driver.navigate().to("https://qa.oswfs.com/NexxarGenWeb/");
-        driver.manage().window().maximize();
+        //driver.navigate().to("https://qa.oswfs.com/NexxarGenWeb/");
+        //driver.manage().window().maximize();
     }
 
     @After
