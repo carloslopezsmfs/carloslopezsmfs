@@ -18,7 +18,7 @@ import static stepDefinition.Hook.driver;
 public class TestPage {
 
     private final String menuFrameOmnex2 = "menu";
-    final Logger log = getLogger(lookup().lookupClass());
+    //final Logger log = getLogger(lookup().lookupClass());
 
     public void test() throws InterruptedException {
         /*String url = Hook.driver.getCurrentUrl();
@@ -40,7 +40,7 @@ public class TestPage {
         String sutUrl = "https://www.bing.com/";
         driver.get(sutUrl);
         String title = driver.getTitle();
-        log.debug("The title of {} is {}", sutUrl, title);
+        //log.debug("The title of {} is {}", sutUrl, title);
         WebElement element = driver.findElement(By.id("sb_form_q"));
         element.sendKeys("test");
         WebElement element1 = driver.findElement(By.id("search_icon"));
@@ -60,8 +60,5 @@ public class TestPage {
         changeFrame(menuFrameOmnex2);
     }
 
-    @Given("I log in")
-    public void iLogIn() throws InterruptedException {
-        test();
-    }
+
 }
