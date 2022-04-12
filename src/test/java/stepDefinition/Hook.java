@@ -4,6 +4,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class Hook {
@@ -15,10 +16,8 @@ public class Hook {
     @Before
     public static void setUp() {
         System.setProperty("wdm.defaultBrowser", "chrome");
-        wdm = WebDriverManager.getInstance();
+        wdm = WebDriverManager.getInstance().proxy("");
         driver = wdm.create();
-        //driver.navigate().to("https://qa.oswfs.com/NexxarGenWeb/");
-        //driver.manage().window().maximize();
     }
 
     @After
