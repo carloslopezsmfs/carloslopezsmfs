@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.slf4j.Logger;
 
 import static java.lang.invoke.MethodHandles.lookup;
@@ -27,8 +28,12 @@ public class Hook {
         /*System.setProperty("wdm.defaultBrowser", "chrome");
         wdm = WebDriverManager.chromedriver().proxy("");
         driver = wdm.create();*/
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
-        driver = new ChromeDriver();
+        System.setProperty("wdm.defaultBrowser", "chrome");
+        WebDriverManager.chromiumdriver().clearDriverCache().setup();
+        ChromeOptions options = new ChromeOptions().setHeadless(true);
+        driver = new ChromeDriver(options);
+        /*System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
+        driver = new ChromeDriver();*/
     }
 
     @After
