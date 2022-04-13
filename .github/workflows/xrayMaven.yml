@@ -29,6 +29,6 @@ jobs:
       with:
         username: ${{ secrets.CLIENT_ID }}
         password: ${{ secrets.CLIENT_SECRET }}
-        testFormat: "json"
+        testFormat: "cucumber"
         testPaths: "**/cucumber.json"
         projectKey: "TEST"
