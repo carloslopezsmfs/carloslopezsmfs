@@ -60,5 +60,10 @@ public class TestPage {
         changeFrame(menuFrameOmnex2);
     }
 
+    @Given("I log in")
+    public void iLogIn() throws InterruptedException {
+        test();
+    }
+
 
 }

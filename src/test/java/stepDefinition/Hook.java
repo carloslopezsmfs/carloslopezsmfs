@@ -43,7 +43,7 @@ public class Hook {
         driver.quit();
     }
 
-    @Given("I log in")
+    /*@Given("I log in")
     public void iLogIn() throws InterruptedException {
         String sutUrl = "https://www.bing.com/";
         driver.get(sutUrl);
@@ -55,5 +55,5 @@ public class Hook {
         element1.click();
         String title1 = driver.getTitle();
         Assert.assertNotEquals(title, title1);
-    }
+    }*/
 }
