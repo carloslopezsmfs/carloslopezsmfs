@@ -28,7 +28,8 @@ public class TestPage {
         submitBtn.click();
         String urlNew = Hook.driver.getCurrentUrl();
         Assert.assertNotEquals(url, urlNew);*/
-        /*WebElement username = driver.findElement(By.name("username"));
+        /*driver.get("https://qa.oswfs.com/NexxarGenWeb/");
+        WebElement username = driver.findElement(By.name("username"));
         username.sendKeys("audrey_400313");
         WebElement password = driver.findElement(By.id("password"));
         password.sendKeys("P@ssword1");
