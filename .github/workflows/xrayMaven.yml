@@ -29,5 +29,5 @@ jobs:
       with:
         username: ${{ secrets.CLIENT_ID }}
         password: ${{ secrets.CLIENT_SECRET }}
-        testPaths: "**/surefire-reports/*.xml"
+        testPaths: "**/cucumber-results.xml"
         projectKey: "TEST"
