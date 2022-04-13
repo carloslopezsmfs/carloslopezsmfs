@@ -28,7 +28,7 @@ public class TestPage {
         submitBtn.click();
         String urlNew = Hook.driver.getCurrentUrl();
         Assert.assertNotEquals(url, urlNew);*/
-        /*driver.get("https://qa.oswfs.com/NexxarGenWeb/");
+        driver.get("https://qa.oswfs.com/NexxarGenWeb/");
         WebElement username = driver.findElement(By.name("username"));
         username.sendKeys("audrey_400313");
         WebElement password = driver.findElement(By.id("password"));
@@ -37,8 +37,8 @@ public class TestPage {
         submitBtn.click();
         Thread.sleep(1000);
         goToMenu();
-        Assert.assertTrue(driver.findElement(By.id("menu_whoAmI_myUserSettings")).isDisplayed());*/
-        String sutUrl = "https://www.bing.com/";
+        Assert.assertTrue(driver.findElement(By.id("menu_whoAmI_myUserSettings")).isDisplayed());
+        /*String sutUrl = "https://www.bing.com/";
         driver.get(sutUrl);
         String title = driver.getTitle();
         //log.debug("The title of {} is {}", sutUrl, title);
@@ -47,7 +47,7 @@ public class TestPage {
         WebElement element1 = driver.findElement(By.id("search_icon"));
         element1.click();
         String title1 = driver.getTitle();
-        Assert.assertNotEquals(title, title1);
+        Assert.assertNotEquals(title, title1);*/
     }
 
     private void changeFrame(String frameName) {
