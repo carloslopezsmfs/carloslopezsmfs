@@ -30,7 +30,7 @@ public class Hook {
         driver = wdm.create();*/
         System.setProperty("wdm.defaultBrowser", "chrome");
         WebDriverManager.chromiumdriver().clearDriverCache().setup();
-        ChromeOptions options = new ChromeOptions();
+        ChromeOptions options = new ChromeOptions().setHeadless(true);
         driver = new ChromeDriver(options);
         /*System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
         driver = new ChromeDriver();*/
