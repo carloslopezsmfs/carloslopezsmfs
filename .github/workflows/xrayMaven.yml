@@ -25,7 +25,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: "Import results to Xray"
-      uses: mikepenz/xray-action@v0.9.4
+      uses: mikepenz/xray-action@v2.2.1
       with:
         username: "777348BEB0534B95A30B629FC2A7B5E7"
         password: "b5fa005ffaf50b3d23d6e3176a52293094c7030c47ad18b7797e88bf08371d05"
