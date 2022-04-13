@@ -31,5 +31,5 @@ jobs:
         password: ${{ secrets.CLIENT_SECRET }}
         testFormat: "junit"
         testPaths: "**/cucumber-reports/cucumber-results.xml"
-        testExecKey: TEST-2194
-        projectKey: TEST
+        projectKey: "TEST"
+        combineInSingleTestExec: "true"
